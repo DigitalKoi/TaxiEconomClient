@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="ironside_grey">#696865</color>
+    <color name="mountain_mist">#9A9895</color>
+    <color name="albescent_white">#E3DACB</color>
+    <color name="ivory">#FAFAF9</color>
+    <color name="stark_white">#D6C6AF</color>
+    <color name="golden_tainoi">#F9C657</color>
+
+    <color name="firefly">#2B4141</color>
+    <color name="astral">#227893</color>
+    <color name="persian_green">#12A19B</color>
+    <color name="gossamer">#2F9482</color>
+    <color name="light_sea_green">#1DBFAD</color>
+    <color name="spray">#85CCCE</color>
+</resources>

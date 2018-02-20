@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    defaultConfig {
+        applicationId "com.digitalkoi.taxieconomclient"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode rootProject.codeVersion
+        versionName "$rootProject.naneVersion"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    //Test
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$rootProject.runnerVersion"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
+    //Android
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintVersion"
+//    implementation "com.android.support:support-vector-drawable:$rootProject.supportVersion"
+    implementation "com.android.support:support-v4:$rootProject.supportVersion"
+    implementation "com.android.support:appcompat-v7:$rootProject.supportVersion"
+    implementation "com.android.support:design:$rootProject.supportVersion"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$rootProject.kotlinVersion"
+    //RxJava 2
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
+    compile "io.reactivex.rxjava2:rxkotlin:$rootProject.rxkotlinVersion"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    //RxRelay
+    compile "com.jakewharton.rxrelay2:rxrelay:$rootProject.rxrelayVersion"
+    compile "com.fernandocejas:arrow:$rootProject.arrowVersion"
+    //RxLifecycle
+    compile "com.trello.rxlifecycle2:rxlifecycle:$rootProject.rxlifecycleVersion"
+    //Retrofit
+    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.interceptorVersion"
+    //all converters
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    //RxPermission
+    compile "com.tbruyelle.rxpermissions2:rxpermissions:$rootProject.rxpermissionVersion"
+    //ReactiveLocation
+    compile "pl.charmas.android:android-reactive-location2:$rootProject.rxlocationVersion"
+    compile "com.google.android.gms:play-services-location:$rootProject.googlelocationVersion"
+    //Google maps
+    implementation "com.google.android.gms:play-services-maps:$rootProject.googlelocationVersion"
+    // Timber
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+    //Room
+    implementation "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.roomVersion"
+}
